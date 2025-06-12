@@ -13,7 +13,7 @@ public class Menu {
 
     public void mostrarMenu() {
         System.out.println("""
-            *** ¡Bienvenido(a) a su Conversor de Monedas! ***
+            \n*** ¡Bienvenido(a) a su Conversor de Monedas! ***
             
             1) Dólar =>> Peso argentino.
             2) Peso argentino =>> Dólar.
