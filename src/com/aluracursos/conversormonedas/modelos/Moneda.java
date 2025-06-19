@@ -6,11 +6,11 @@ public class Moneda {
     private String codigo; // Por ejemplo "USD", "ARS".
     private Map<String, Double> tasaCambio;
 
-    public String codigo() {
+    public String getCodigo() {
         return codigo;
     }
 
-    public Map<String, Double> getConversionRates() {
+    public Map<String, Double> getTasaCambio() {
         return tasaCambio;
     }
 
