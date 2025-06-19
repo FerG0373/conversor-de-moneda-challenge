@@ -25,4 +25,17 @@ public class Menu {
             """);
         System.out.print(">> ");
     }
+
+    public void elegir() {
+        while(opcion != 7) {
+            mostrarMenu();
+            opcion = teclado.nextInt();
+
+            switch(opcion) {
+                case 1:
+                    System.out.println("Ingresar el valor a convertir: ");
+            }
+        }
+    }
+
 }
