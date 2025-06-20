@@ -1,16 +1,17 @@
 package com.aluracursos.conversormonedas.services;
 
 import com.aluracursos.conversormonedas.modelos.Moneda;
+import com.aluracursos.conversormonedas.modelos.MonedaExchangeRate;
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 public class ParserJsonMoneda {
+    private final Gson gson = new Gson();
 
     public Moneda parsearJson(String json) {
-        Gson gson = new Gson();
-        return new Gson().fromJson(json, Moneda.class);
+        // JSON al record.
+        MonedaExchangeRate monedaExchangeRate = gson.fromJson(json, MonedaExchangeRate.class);
+        // Convierte el record a la clase Moneda.
+        return new Moneda(monedaExchangeRate.base_code(), monedaExchangeRate.conversion_rates());
     }
-    //Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
+
 }

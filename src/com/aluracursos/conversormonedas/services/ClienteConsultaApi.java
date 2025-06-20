@@ -20,13 +20,19 @@ public class ClienteConsultaApi {
         try {
             HttpResponse<String> response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
-            String json = response.body();
-            System.out.println(json);
-            return json;
+            // Validación.
+            if (response.statusCode() != 200) {
+                throw new RuntimeException("API respondió con error: " + response.statusCode());
+            }
+            if (response.body() == null) {
+                throw new RuntimeException("Cuerpo de la respuesta nulo");
+            }
+            // Retorna el JSON de la API.
+            return response.body();
+
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }
 
-        //return new Gson().fromJson(response.body(), Moneda.class);
     }
 }

@@ -26,7 +26,7 @@ public class Menu {
         System.out.print(">> ");
     }
 
-    public void elegir() {
+    public void elegir(int opcion) {
         while(opcion != 7) {
             mostrarMenu();
             opcion = teclado.nextInt();
@@ -34,6 +34,7 @@ public class Menu {
             switch(opcion) {
                 case 1:
                     System.out.println("Ingresar el valor a convertir: ");
+                    opcion = teclado.nextInt();
             }
         }
     }
