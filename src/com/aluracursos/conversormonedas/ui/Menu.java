@@ -21,8 +21,10 @@ public class Menu {
     }
 
     public void mostrarMenu() {
-        System.out.println("""
+        System.out.print("""
             \n*** ¡Bienvenido(a) a su Conversor de Monedas! ***
+            
+            Seleccione la opción que desea:
             
             1) Dólar =>> Peso argentino.
             2) Peso argentino =>> Dólar.
@@ -35,7 +37,7 @@ public class Menu {
         System.out.print(">> ");
     }
 
-    public void elegirOpcion(int opcion) {
+    public void elegirOpcion() {
         while(opcion != 7) {
             mostrarMenu();
             opcion = teclado.nextInt();
