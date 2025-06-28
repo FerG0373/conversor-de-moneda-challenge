@@ -49,7 +49,7 @@ public class Menu {
                 case 4 -> procesaConversion("BRL", "USD");
                 case 5 -> procesaConversion("USD", "EUR");
                 case 6 -> procesaConversion("EUR", "USD");
-                case 7 -> System.out.println("¡Gracias por usar el conversor!");
+                case 7 -> System.out.println("¡Programa finalizado! Gracias por usar el programa.");
                 default -> System.out.println("Opción no válida.");
             }
         }
@@ -61,7 +61,7 @@ public class Menu {
 
         try {
             double resultado = convertidorDeMonedas.convertirMoneda(codigoOrigen, codigoDestino, monto);
-            System.out.printf("El resultado es: %.2f %s%n", resultado, codigoDestino);
+            System.out.printf("\nEl resultado es: %.2f %s%n", resultado, codigoDestino);
         } catch (IllegalArgumentException e) {
             System.out.println("Error " + e.getMessage());
         }

@@ -14,7 +14,5 @@ public class Main {
         } finally {
             inputTeclado.close();
         }
-
-        System.out.println("¡Programa finalizado! Gracias por usar el conversor.");
     }
 }
